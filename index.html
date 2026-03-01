@@ -4,8 +4,100 @@
   <meta charset="utf-8">
   <title>SelfVCWM</title>
 </head>
-<body>
-  <h1>SelfVCWM Audio Examples</h1>
-  <p>Demo page coming soon.</p>
+
+<body style="font-family: Arial, sans-serif; margin: 40px; line-height: 1.6;">
+
+  <h1 style="text-align: center;">SelfVCWM Audio Examples</h1>
+
+  <!-- Pipeline Figure -->
+  <div align="center" style="padding: 20px;">
+
+    <img src="https://github.com/yiitozer/selfwmvc/docs/source/_static/self_vc_pipeline.png?raw=true" 
+         alt="Self Voice Conversion as an Attack against Neural Audio Watermarking" 
+         width="960"
+         style="
+           display: block;
+           margin: 0 auto;
+           border: 1px solid #ccc;
+           border-radius: 10px;
+           box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+           max-width: 90%;
+           height: auto;
+         ">
+
+    <h2 style="
+      font-size: 15px;
+      color: #333;
+      font-weight: 500;
+      margin-top: 12px;
+      text-align: center;
+    ">
+      Self Voice Conversion as an Attack against Neural Audio Watermarking
+    </h2>
+
+  </div>
+
+  <hr>
+
+  <!-- Paper Info -->
+  <p><em>Accompanying website for the paper:</em></p>
+
+  <p>
+    <strong>Self Voice Conversion as an Attack against Neural Audio Watermarking</strong><br>
+    Yigitcan Özer, Wanying Ge, Zhe Zhang, Xin Wang, Junichi Yamagishi<br>
+    To appear at IEICE SP/SLP 2026, Okinawa, Japan<br>
+    <a href="https://arxiv.org/abs/2601.20432" target="_blank">[arXiv]</a>
+  </p>
+
+  <hr>
+
+  <!-- Abstract -->
+  <h2>Abstract</h2>
+
+  <p>
+    Audio watermarking embeds auxiliary information into speech while maintaining speaker identity,
+    linguistic content, and perceptual quality. Although recent advances in neural and digital
+    signal processing-based watermarking methods have improved imperceptibility and embedding capacity,
+    robustness is still primarily assessed against conventional distortions such as compression,
+    additive noise, and resampling.
+  </p>
+
+  <p>
+    However, the rise of deep learning-based attacks introduces novel and significant threats
+    to watermark security. In this work, we investigate self voice conversion as a universal,
+    content-preserving attack against audio watermarking systems. Self voice conversion remaps
+    a speaker's voice to the same identity while altering acoustic characteristics through a
+    voice conversion model.
+  </p>
+
+  <p>
+    We demonstrate that this attack severely degrades the reliability of state-of-the-art
+    watermarking approaches and highlight its implications for the security of modern
+    audio watermarking techniques.
+  </p>
+
+  <hr>
+
+  <!-- Citation -->
+  <h2>Citation</h2>
+
+  <p>If you find our paper useful in your research, please cite:</p>
+
+  <pre style="
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 14px;
+  "><code>
+@inproceedings{OezerEtAl26_SelfVCWM_IEICE,
+  author = {Yigitcan {\"O}zer and Wanying Ge and Zhe Zhang and Xin Wang and Junichi Yamagishi},
+  title = {Self Voice Conversion as an Attack against Neural Audio Watermarking},
+  booktitle = {The Institute of Electronics, Information and Communication Engineers ({IEICE}) Speech Processing Workshop},
+  address = {Naha, Okinawa, Japan},
+  year = {2026},
+}
+  </code></pre>
+
 </body>
 </html>
