@@ -5,15 +5,44 @@
   <title>SelfVCWM</title>
 </head>
 
-<body style="font-family: Arial, sans-serif; margin: 40px; line-height: 1.6;">
+<body style="
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  margin: 60px auto;
+  max-width: 1100px;
+  line-height: 1.65;
+  color: #222;
+">
+
+<!-- Title Section -->
+<div style="text-align:center; margin-bottom:40px;">
 
   <h1 style="
-  text-align: center;
-  font-weight: 600;
-  margin-bottom: 10px;
-">
-  Self Voice Conversion as an Attack against Neural Audio Watermarking
-</h1>
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  ">
+    Self Voice Conversion as an Attack against Neural Audio Watermarking
+  </h1>
+
+  <div style="
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 14px;
+  ">
+    Yigitcan Özer · Wanying Ge · Zhe Zhang · Xin Wang · Junichi Yamagishi
+  </div>
+
+  <div style="
+    font-size: 16px;
+    color: #777;
+  ">
+    IEICE SP/SLP 2026 · Okinawa, Japan ·
+    <a href="https://arxiv.org/abs/2601.20432" target="_blank" style="color:#0066cc; text-decoration:none;">
+      arXiv
+    </a>
+  </div>
+
+</div>
 
 <p style="
   text-align: center;
@@ -24,33 +53,19 @@
   Audio Demo Page
 </p>
 
-  <!-- Pipeline Figure -->
-  <div align="center" style="padding: 20px;">
+<!-- Pipeline Figure -->
+<div style="text-align:center; margin: 40px 0;">
 
-    <img src="https://github.com/yiitozer/selfwmvc/blob/main/docs/source/_static/self_vc_pipeline.png?raw=true" 
-         alt="" 
-         width="960"
-         style="
-           display: block;
-           margin: 0 auto;
-           border: 1px solid #ccc;
-           border-radius: 10px;
-           box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-           max-width: 90%;
-           height: auto;
-         ">
+  <img src="https://raw.githubusercontent.com/yiitozer/selfwmvc/main/docs/source/_static/self_vc_pipeline.png"
+       alt="Self Voice Conversion Pipeline"
+       style="
+         width: 95%;
+         max-width: 1000px;
+         border-radius: 12px;
+         box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+       ">
 
-    <h2 style="
-      font-size: 15px;
-      color: #333;
-      font-weight: 500;
-      margin-top: 12px;
-      text-align: center;
-    ">
-      Self Voice Conversion as an Attack against Neural Audio Watermarking
-    </h2>
-
-  </div>
+</div>
 
   <hr>
 
@@ -93,7 +108,13 @@
 
   <hr>
 <hr>
-<h2>Audio Examples</h2>
+<h2 style="
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+">
+  Audio Examples
+</h2>
 
 <p style="max-width: 980px;">
 Each example provides the original audio, the watermarked version,
