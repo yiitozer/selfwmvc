@@ -77,6 +77,103 @@
   </p>
 
   <hr>
+<hr>
+<h2>Audio Examples</h2>
+
+<p style="max-width: 980px;">
+Each example provides the original audio, the watermarked version,
+and the outputs after self voice conversion (RVC, kNN-VC) and vocoder re-synthesis.
+</p>
+
+<div id="audio-examples"></div>
+
+<script>
+  // Your current repo layout: ./audio_examples/<wm>/<item>/*.mp3
+  const BASE = "audio_examples";
+
+  const WM_MODELS = ["audioseal", "timbre", "voicemark", "wmcodec"];
+
+  const ITEMS = [
+    "item_0000_4507",
+    "item_0001_6829",
+    "item_0002_6829",
+    "item_0003_8224",
+    "item_0004_5142",
+  ];
+
+  const AUDIO_FILES = [
+    { label: "Original", file: "original.mp3" },
+    { label: "Watermarked", file: "wm.mp3" },
+    { label: "WM + RVC", file: "wm_rvc.mp3" },
+    { label: "WM + kNN-VC", file: "wm_knnvc.mp3" },
+    { label: "WM + WaveGlow", file: "wm_waveglow.mp3" },
+    { label: "WM + HiFi-GAN", file: "wm_hifigan.mp3" },
+    { label: "WM + HN-Sinc-NSF", file: "wm_hn_sinc_nsf.mp3" },
+    { label: "WM + HN-Sinc-NSF-HiFi", file: "wm_hn_sinc_nsf_hifi.mp3" },
+  ];
+
+  function audioPlayer(src) {
+    return `
+      <audio controls preload="none" style="width: 220px;">
+        <source src="${src}" type="audio/mpeg">
+      </audio>
+    `;
+  }
+
+  function render() {
+    const container = document.getElementById("audio-examples");
+    container.innerHTML = "";
+
+    WM_MODELS.forEach(wm => {
+      const section = document.createElement("div");
+      section.style.margin = "28px 0";
+
+      section.innerHTML = `
+        <h3 style="margin-bottom: 10px;">
+          Watermark: <span style="font-family: monospace;">${wm}</span>
+        </h3>
+
+        <div style="overflow-x: auto;">
+          <table style="border-collapse: collapse; min-width: 1200px;">
+            <thead>
+              <tr>
+                <th style="text-align:left; padding: 8px; border-bottom: 1px solid #ddd;">Item</th>
+                ${AUDIO_FILES.map(a => `
+                  <th style="text-align:left; padding: 8px; border-bottom: 1px solid #ddd;">${a.label}</th>
+                `).join("")}
+              </tr>
+            </thead>
+
+            <tbody>
+              ${ITEMS.map(item => `
+                <tr>
+                  <td style="padding: 8px; border-bottom: 1px solid #eee; font-family: monospace;">
+                    ${item}
+                  </td>
+
+                  ${AUDIO_FILES.map(a => {
+                    const src = `${BASE}/${wm}/${item}/${a.file}`;
+                    return `
+                      <td style="padding: 8px; border-bottom: 1px solid #eee;">
+                        ${audioPlayer(src)}
+                      </td>
+                    `;
+                  }).join("")}
+                </tr>
+              `).join("")}
+            </tbody>
+          </table>
+        </div>
+      `;
+
+      container.appendChild(section);
+    });
+  }
+
+  render();
+</script>
+
+  
 
   <!-- Citation -->
   <h2>Citation</h2>
