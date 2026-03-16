@@ -1,1 +1,1 @@
-# selfwmvc
+# SelfVCWM
